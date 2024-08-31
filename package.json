@@ -1,16 +1,22 @@
 {
   "name": "vercel",
   "version": "1.0.0",
+  "description": "A Node.js project for deploying with Vercel, using Express, Sequelize, and PostgreSQL.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "node --env-file .env --watch ./src/server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vercel",
+    "express",
+    "sequelize",
+    "postgresql",
+    "api"
+  ],
+  "author": "Gabriel Martinez",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "2.8.5",
     "express": "4.19.2",
@@ -21,5 +27,13 @@
   },
   "devDependencies": {
     "morgan": "1.10.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielmartinezghioma/template-exp-sq-module.git"
+  },
+  "homepage": "https://github.com/gabrielmartinezghioma/template-exp-sq-module#readme"
 }
