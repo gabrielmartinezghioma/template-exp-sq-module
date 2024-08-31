@@ -11,7 +11,6 @@ app.use(helmet({
   crossOriginResourcePolicy: false,
 }));
 
-
 app.use('/api/v1', router)
 
 app.get('/', (req, res) => {
