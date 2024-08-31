@@ -15,7 +15,7 @@ app.use(helmet({
 app.use('/api/v1', router)
 
 app.get('/', (req, res) => {
-  return res.send('<h1>Hello Word</h1>')
+  return res.send(`<h1>${process.env.SALUD}</h1>`)
 })
 
 export default app
