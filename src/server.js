@@ -6,14 +6,14 @@ const PORT = process.env.PORT || 8080
 async function server() {
   try {
     app.listen(PORT, () => {
-      console.log(`Example app listening on port ${PORT}`)
+      console.log(`✅ App listening on port ${PORT}`)
     })
 
     await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('✅ Connection has been established successfully.');
 
   } catch (e) {
-    console.error('Error occurred', e.message);
+    console.error('❌ Error occurred', e.message);
   }
 }
 
