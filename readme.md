@@ -51,6 +51,7 @@ This will start the server with --watch mode, automatically reloading on changes
 
 ## Project Structure
 
+```bash
 ├── src
 │   ├── server.js        # Entry point for the application
 │   ├── models           # Sequelize models
@@ -60,6 +61,7 @@ This will start the server with --watch mode, automatically reloading on changes
 ├── .env                 # Environment variables
 ├── package.json         # Project metadata and dependencies
 └── README.md            # Project documentation
+```
 
 
 ## Dependencies
