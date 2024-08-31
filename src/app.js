@@ -17,7 +17,11 @@ process.env.NODE_ENV === 'development' && app.use(logger('dev'))
 app.use('/api/v1', router)
 
 app.get('/', (req, res) => {
-  return res.send(`<h1>Hello Word</h1>`)
+  return res.send(`
+    <h1 style="text-align: center; font-family: Arial, sans-serif;">
+      Welcome to Express with Sequelize
+    </h1>
+  `);
 })
 
 export default app
