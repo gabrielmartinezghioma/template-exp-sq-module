@@ -1,8 +1,8 @@
-import exprss from 'express'
+import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 
-const app = exprss()
+const app = express()
 
 app.use(express.json());
 app.use(cors())
