@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "npm start",
-  "devCommand": "npm run dev",
-  "framework": "node",
-  "installCommand": "npm install",
   "builds": [
     {
       "src": "src/server.js",
@@ -15,5 +11,9 @@
       "src": "/(.*)",
       "dest": "/src/server.js"
     }
-  ]
+  ],
+  "installCommand": "npm install",
+  "env": {
+    "DATABASE_URL": "this is the value"
+  }
 }
