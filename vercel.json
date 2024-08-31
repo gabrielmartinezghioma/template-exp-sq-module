@@ -12,6 +12,5 @@
       "dest": "/src/server.js"
     }
   ],
-  "framework": "node",
   "installCommand": "npm install"
 }
