@@ -63,7 +63,6 @@ This will start the server with --watch mode, automatically reloading on changes
 └── README.md            # Project documentation
 ```
 
-
 ## Dependencies
 
 - `express`: Fast, unopinionated, minimalist web framework for Node.js.
@@ -102,7 +101,7 @@ Contributions are welcome! Please submit a pull request or open an issue on GitH
 
 ## License
 
-This project is licensed under the ISC License. See the LICENSE file for details.
+This project is licensed under the ISC License.
 
 
 
