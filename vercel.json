@@ -12,5 +12,8 @@
       "dest": "/src/server.js"
     }
   ],
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "env": {
+    "POSTGRES_DATABASE": "postgres://default:3phEvYMXG1mj@ep-yellow-sun-a406axvo.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+  }
 }

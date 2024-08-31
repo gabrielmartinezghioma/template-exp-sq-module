@@ -1,14 +1,19 @@
 import app from "./app.js"
+import sequelize from "./DB/conection.js"
 
 const PORT = process.env.PORT || 8080
 
-function server() {
+async function server() {
   try {
-    app.listen(PORT);
-    console.log(`👉 Server running on port ${PORT}`);
-    console.log(`👉 Link http://localhost:${PORT}`);
-  } catch (error) {
-    console.log(error)
+    app.listen(PORT, () => {
+      console.log(`Example app listening on port ${PORT}`)
+    })
+
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+
+  } catch (e) {
+    console.error('Error occurred', e.message);
   }
 }
 
