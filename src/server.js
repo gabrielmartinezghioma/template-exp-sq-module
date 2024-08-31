@@ -9,7 +9,7 @@ async function server() {
       console.log(`Example app listening on port ${PORT}`)
     })
 
-    await sequelize.authenticate();
+    // await sequelize.authenticate();
     console.log('Connection has been established successfully.');
 
   } catch (e) {

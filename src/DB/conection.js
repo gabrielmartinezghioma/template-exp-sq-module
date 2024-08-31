@@ -1,6 +1,18 @@
-import { Sequelize } from 'sequelize';
+// import { Sequelize } from 'sequelize';
 
-const DB = process.env.POSTGRES_DATABASE
-const sequelize = new Sequelize(DB, { logging: false })
+// const DB = process.env.POSTGRES_DATABASE
+// const sequelize = new Sequelize(DB, { logging: false })
 
-export default sequelize
+// export default sequelize
+
+import pg from 'pg';
+
+const { Pool } = pg;
+
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_DATABASE_URL,
+})
+
+console.log(pool);
+
+export default pool
