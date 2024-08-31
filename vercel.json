@@ -12,8 +12,6 @@
       "dest": "/src/server.js"
     }
   ],
-  "buildCommand": "npm start",
-  "devCommand": "npm run dev",
   "framework": "node",
   "installCommand": "npm install"
 }
