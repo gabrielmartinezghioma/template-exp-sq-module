@@ -1,12 +1,17 @@
 import exprss from 'express'
+import cors from 'cors'
+import helmet from 'helmet'
 
 const app = exprss()
-import cors from 'cors'
 
+app.use(express.json());
 app.use(cors())
+app.use(helmet({
+  crossOriginResourcePolicy: false,
+}));
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello Word</h1>')
+  return res.send('<h1>Hello Word</h1>')
 })
 
 export default app
