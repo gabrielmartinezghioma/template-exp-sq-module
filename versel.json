@@ -9,8 +9,5 @@
   "buildCommand": "npm start",
   "devCommand": "npm run dev",
   "framework": "node",
-  "installCommand": "npm install",
-  "env": {
-    "DATABASE_URL": "this is the value"
-  }
+  "installCommand": "npm install"
 }
