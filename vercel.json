@@ -14,6 +14,6 @@
   ],
   "installCommand": "npm install",
   "env": {
-    "POSTGRES_DATABASE": "postgres://default:T5pkfAecwz8s@ep-quiet-sunset-a4kywf29.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+    "POSTGRES_DATABASE": "postgres://default:X2tUqvARnk7I@ep-white-block-a4st0plk.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
   }
 }
