@@ -1,29 +1,28 @@
 import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
-import router from './routes/index.js'
 import logger from 'morgan'
+import path from 'node:path'
+import { fileURLToPath } from 'url'
+import router from './routes/index.js'
+import errorHandler from './config/middlewares/errorHandler.js'
 
 const app = express()
 
-app.use(express.json())
-app.use(express.json())
-app.use(cors())
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false
-  })
-)
 process.env.NODE_ENV === 'development' && app.use(logger('dev'))
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// middleware
+app.use(cors())
+app.use(express.json())
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(helmet({ crossOriginResourcePolicy: false }))
+
+app.get('/', router)
 app.use('/api/v1', router)
 
-app.get('/', (req, res) => {
-  return res.send(`
-    <h1 style="text-align: center; font-family: Arial, sans-serif;">
-      Welcome to Express with Sequelize
-    </h1>
-  `)
-})
+app.use(errorHandler)
 
 export default app
