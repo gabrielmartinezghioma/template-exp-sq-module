@@ -6,17 +6,18 @@ const PORT = process.env.PORT || 8080
 async function startServer() {
   try {
     await sequelize.authenticate()
-    console.log('✅ Database connection has been established successfully.')
+    console.log('✅ Database connection established successfully.')
 
     await sequelize.sync()
-    console.log('✅ Database has been synchronized successfully.')
+    console.log('✅ Database synchronized successfully.')
 
     app.listen(PORT, () => {
-      console.log(`✅ App listening on port ${PORT}`)
-      console.log(`✅ http://localhost:${PORT}`)
+      console.log(`✅ Server is running on port ${PORT}`)
+      console.log(`🌐 Access the application at: http://localhost:${PORT}`)
     })
   } catch (error) {
-    console.error('❌ Error occurred', error.message)
+    console.error('❌ Failed to start the server.')
+    console.error(`Error: ${error.message}`)
     process.exit(1)
   }
 }
