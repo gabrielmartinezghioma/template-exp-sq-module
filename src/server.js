@@ -3,7 +3,7 @@ import sequelize from './config/DB/conection.js'
 
 const PORT = process.env.PORT || 8080
 
-async function startServer () {
+async function startServer() {
   try {
     await sequelize.authenticate()
     console.log('✅ Database connection has been established successfully.')

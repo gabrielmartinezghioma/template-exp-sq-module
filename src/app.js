@@ -9,9 +9,11 @@ const app = express()
 app.use(express.json())
 app.use(express.json())
 app.use(cors())
-app.use(helmet({
-  crossOriginResourcePolicy: false
-}))
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false
+  })
+)
 process.env.NODE_ENV === 'development' && app.use(logger('dev'))
 
 app.use('/api/v1', router)

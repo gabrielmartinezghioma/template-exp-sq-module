@@ -22,6 +22,7 @@ First, clone the repository:
 git clone https://github.com/gabrielmartinezghioma/template-exp-sq-module.git
 cd template-exp-sq-module
 ```
+
 Install the dependencies:
 
 ```bash
@@ -29,11 +30,13 @@ npm install
 ```
 
 ## Usage
+
 To start the server, run:
 
 ```bash
 npm start
 ```
+
 This will start the server on the port specified in your environment variables.
 
 For development, use the following command:
@@ -102,6 +105,3 @@ Contributions are welcome! Please submit a pull request or open an issue on GitH
 ## License
 
 This project is licensed under the ISC License.
-
-
-
