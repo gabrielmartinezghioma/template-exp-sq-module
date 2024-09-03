@@ -1,12 +1,13 @@
 {
-  "name": "vercel",
+  "name": "module-exp-sq",
   "version": "1.0.0",
   "description": "A Node.js project for deploying with Vercel, using Express, Sequelize, and PostgreSQL.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node ./src/server.js",
-    "dev": "node --env-file .env --watch ./src/server.js"
+    "dev": "node --env-file .env --watch ./src/server.js",
+    "lint": "eslint --fix . --ext .js"
   },
   "keywords": [
     "vercel",
@@ -26,10 +27,14 @@
     "sequelize": "6.37.3"
   },
   "devDependencies": {
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "standard": "17.1.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   },
   "repository": {
     "type": "git",
